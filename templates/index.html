@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soil Moisture Forecasting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center px-4">
+  <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-2xl space-y-6">
+
+    <div class="text-center">
+      <h1 class="text-3xl font-bold text-blue-700 mb-2">🌾 Soil Moisture Forecasting</h1>
+      <p class="text-gray-600">
+        A machine learning-based platform to predict future soil moisture levels using remote sensing data 
+        from Landsat-8, Sentinel-2, and SMAP. Useful for research and planning in regions lacking physical sensors.
+      </p>
+    </div>
+
+    <form action="/predict" method="post" enctype="multipart/form-data" class="space-y-4">
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Select State / Region</label>
+        <select name="region" class="w-full border border-gray-300 p-2 rounded focus:outline-none">
+          <option value="maharashtra">Maharashtra(Thar Desert)</option>
+          <option value="rajasthan">Rajasthan(Marathwada & Vidarbha)</option>
+          <option value="gujarat">Gujarat</option>
+          <option value="telangana">Telangana(North Karnataka)</option>
+          <option value="uttarpradesh">Uttar Pradesh</option>
+          <option value="andhrapradesh">Andhra Pradesh</option>
+          <option value="bihar">Bihar</option>
+          <option value="tamilnadu">Tamil nadu</option>
+          <option value="karnataka">Karnataka</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-medium mb-1">Forecast Range (Years)</label>
+        <select name="years" class="w-full border border-gray-300 p-2 rounded focus:outline-none">
+          <option value="1">1 Year</option>
+          <option value="3">2 Year</option>
+          <option value="3">3 Years</option>
+          <option value="5">4 Years</option>
+          <option value="5">5 Years</option>
+          <option value="6">6 Years</option>
+          <option value="7">7 Years</option>
+          <option value="8">8 Years</option>
+          <option value="9">9 Years</option>
+          <option value="10">10 Years</option>
+        </select>
+      </div>
+
+      <div>
+        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition">
+          🔍 Predict Soil Moisture
+        </button>
+      </div>
+    </form>
+
+  </div>
+</body>
+</html>
