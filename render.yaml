@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: soil-moisture-forecast
-    env: python
-    pythonVersion: "3.11"
-    buildCommand: "pip install --upgrade pip\npip install --prefer-binary -r requirements.txt"
-    startCommand: "gunicorn app:app"
